@@ -1,0 +1,9 @@
+{
+	"name": "datafct1001",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b4647d16-d002-4cad-9058-189f4a739080",
+		"tenantId": "84f1e4ea-8554-43e1-8709-f0b8589ea118"
+	}
+}
