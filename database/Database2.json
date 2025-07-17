@@ -1,0 +1,22 @@
+{
+	"name": "Database2",
+	"properties": {
+		"Name": "Database2",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://dgen2@dgent1.dfs.core.windows.net/Database2",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "hunoot-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
