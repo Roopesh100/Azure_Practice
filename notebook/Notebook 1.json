@@ -1,0 +1,45 @@
+{
+	"name": "Notebook 1",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "b367f8ee-61c1-42bd-b657-4377d7a51bf0"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "python"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"source": [
+					"# Read the text file into a DataFrame\n",
+					"df = spark.read.text(\"path/to/your/textfile.txt\")\n",
+					"\n",
+					"# Write the DataFrame to a Delta Lake table\n",
+					"df.write.format(\"delta\").save(\"/path/to/delta-table\")"
+				],
+				"execution_count": null
+			}
+		]
+	}
+}
